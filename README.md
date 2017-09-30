@@ -1,11 +1,18 @@
 
-# Node Sample Project
-> A project to kickstart a node app / server, with the common things already setup.  
+# Docker Auto Pruner
+> Periodically removes dangling docker images over a certain age
+>
 > 29 Sept 2017 - Rob Anderson
 
 ## Features
-- Basic `Dockerfile` to build the app
-- Docker build scripts to build and push an image based on the contents of `REGISTRY` & `VERSION`
-- Mocha & Chai unit tests setup
-- Eslint setup, with a bit of config tweaks
-- Code coverage with nyc
+- Runs every hour, removing dangling images that are older than 15 days
+- The logs is stored at `/app/logs/app.log` if you want mount it out (Defaults to a volume)
+- Requires the docker socket mounted in mounted at `/var/run/docker.sock`
+
+
+
+## Optional Variables
+| Variable      | Purpose |
+| ------------- | ------- |
+| MAX_AGE       | The maximum age a dangling image can be, a number of days |
+| DOCKER_SOCKET | Where the docker socket is mounted in (default: `/var/run/docker.sock`) | 

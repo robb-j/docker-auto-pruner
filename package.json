@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.1"
+    "dockerode": "^2.5.1",
+    "reg-task": "^1.0.1",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
