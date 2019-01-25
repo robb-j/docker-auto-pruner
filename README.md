@@ -1,8 +1,11 @@
 
 # Docker Auto Pruner
+
 > Periodically removes dangling docker images over a certain age
 >
 > 29 Sept 2017 - Rob Anderson
+
+> **Archived** – This project has been archived and is generally unsupported
 
 ## Features
 - Runs every hour, removing dangling images that are older than 15 days
